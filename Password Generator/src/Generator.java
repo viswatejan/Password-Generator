@@ -110,7 +110,6 @@ public class Generator {
 
             if (isInclude(input)) IncludeSym = true;
 
-            //No Pool Selected
             if (!IncludeUpper && !IncludeLower && !IncludeNum && !IncludeSym) {
                 System.out.println("You have selected no characters to generate your " +
                         "password at least one of your answers should be Yes");
