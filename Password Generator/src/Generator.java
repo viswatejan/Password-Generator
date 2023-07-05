@@ -83,7 +83,7 @@ public class Generator {
         boolean IncludeNum = false;
         boolean IncludeSym = false;
 
-        boolean correctParams = false;
+        boolean retry = false;
 
         System.out.println();
         System.out.println("Hello, welcome to the Password Generator :) answer"
@@ -113,7 +113,7 @@ public class Generator {
             if (!IncludeUpper && !IncludeLower && !IncludeNum && !IncludeSym) {
                 System.out.println("You have selected no characters to generate your " +
                         "password at least one of your answers should be Yes");
-                correctParams = true;
+                retry = true;
             }
 
             System.out.println("Great! Now enter the length of the password");
@@ -124,7 +124,7 @@ public class Generator {
 
             System.err.println("Your generated password -> " + password);
 
-        } while (correctParams);
+        } while (retry);
     }
 
     private boolean isInclude(String Input) {
